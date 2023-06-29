@@ -1,0 +1,36 @@
+{% extends 'menu.html' %}
+
+{% block content %}
+<div class="col-md-12 my-4">
+    <h2 class="h4 mb-1">Morpion</h2>
+    <p>Difficultes</p>
+    <div class="card shadow">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="{{ url_for('initialise', difficulte=1) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'easy.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{{ url_for('initialise', difficulte=11) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'moyen.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{{ url_for('initialise', difficulte=111) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'difficile.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> <!-- customized table -->
+{% endblock %}

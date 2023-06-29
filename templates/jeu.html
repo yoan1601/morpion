@@ -1,0 +1,89 @@
+{% extends 'menu.html' %}
+
+{% block content %}
+<div class="col-md-12 my-4">
+    <h2 class="h4 mb-1">Morpion</h2>
+    <h4 class="h4 mb-1">Jeu en cours</h4>
+    <p>Tour de X</p>
+    <div class="card shadow">
+        <div class="card-body" style="width: 45vw; margin: 0 auto;">
+            <div class="row">
+                {% for case in grid[:3]: %}
+                <div class="col-md-4">
+                    {% if case == 'X' %}
+                    <a href="{{ url_for('initialise', difficulte=1) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'X.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                    {% elif case == 'O' %}
+                    <a href="{{ url_for('initialise', difficulte=1) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'O.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                    {% else %}
+                    <a href="{{ url_for('initialise', difficulte=1) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'blanc.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                {% for case in grid[3:6]: %}
+                <div class="col-md-4">
+                    {% if case == 'X' %}
+                    <a href="{{ url_for('initialise', difficulte=1) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'X.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                    {% elif case == 'O' %}
+                    <a href="{{ url_for('initialise', difficulte=1) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'O.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                    {% else %}
+                    <a href="{{ url_for('initialise', difficulte=1) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'blanc.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                {% for case in grid[6:9]: %}
+                <div class="col-md-4">
+                    {% if case == 'X' %}
+                    <a href="{{ url_for('initialise', difficulte=1) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'X.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                    {% elif case == 'O' %}
+                    <a href="{{ url_for('initialise', difficulte=1) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'O.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                    {% else %}
+                    <a href="{{ url_for('initialise', difficulte=1) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'blanc.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+</div> <!-- customized table -->
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'menu.html' %}
+
+{% block content %}
+<div class="col-md-12 my-4">
+    <h2 class="h4 mb-1">Morpion</h2>
+    <p>Choisissez votre symbole</p>
+    <div class="card shadow">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-5">
+                    <a href="{{ url_for('symbole', player=1) }}">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'X.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                </div>
+                <div class="col-md-2" style="display: flex; justify-content:center; flex-direction: column;">
+                    <span style="margin: 0 auto; font-size: xx-large; font-weight: bold;">OU</span>
+                </div>
+                <div class="col-md-5">
+                    <a href="{{ url_for('symbole',player=0) }}?">
+                        <figure class="fig">
+                            <img src="{{ url_for('static', filename= 'O.png') }}" alt="" srcset="">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> <!-- customized table -->
+{% endblock %}
